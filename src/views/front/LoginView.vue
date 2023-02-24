@@ -21,7 +21,7 @@
 const { VITE_APP_URL } = import.meta.env
 
 export default {
-  data() {
+  data () {
     return {
       user: {
         username: '',
@@ -30,12 +30,12 @@ export default {
     }
   },
   methods: {
-    login() {
-      const url = `${VITE_APP_URL}/admin/signin`;
+    login () {
+      const url = `${VITE_APP_URL}/admin/signin`
       this.$http
         .post(url, this.user)
         .then((res) => {
-          const { token, expired } = res.data;
+          const { token, expired } = res.data
           console.log(token, expired)
           // 寫入 cookie token
           // expires 設置有效時間
@@ -43,7 +43,8 @@ export default {
           // window.location = 'products.html';
         })
         .catch((err) => {
-          alert(err.response.data.message);
+					console.log(err)
+          // alert(err.response.data.message);
         });
     },
   },

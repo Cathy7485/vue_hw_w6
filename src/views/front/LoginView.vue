@@ -31,19 +31,19 @@ export default {
   },
   methods: {
     login() {
-      const url = `${VITE_APP_URL}/admin/signin`;
+      const url = `${ VITE_APP_URL }admin/signin`
       this.$http
         .post(url, this.user)
         .then((res) => {
-          const { token, expired } = res.data;
-          console.log(token, expired)
+          const { token, expired } = res.data
           // 寫入 cookie token
           // expires 設置有效時間
           document.cookie = `hexToken=${token}; expires=${new Date(expired)};`
-          // window.location = 'products.html';
+          this.$router.push('/admin/products')
+          alert(res.data.message)
         })
         .catch((err) => {
-          alert(err.response.data.message);
+          alert(err.response.data.message)
         });
     },
   },

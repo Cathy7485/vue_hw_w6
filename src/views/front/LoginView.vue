@@ -21,7 +21,7 @@
 const { VITE_APP_URL } = import.meta.env
 
 export default {
-  data() {
+  data () {
     return {
       user: {
         username: '',

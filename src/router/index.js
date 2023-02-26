@@ -5,7 +5,7 @@ const routes = [
     path: '/',
     component: () => import('../views/FrontLayout.vue'),
     //槽狀路由
-    children: [
+    children: [ 
       {
         path: '',
         name: 'Home',

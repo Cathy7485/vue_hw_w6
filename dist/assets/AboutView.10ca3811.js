@@ -1,0 +1,1 @@
+import{_ as o,o as e,c as t}from"./index.281c0acc.js";const s={components:{}},c={class:"home"};function n(r,a,_,p,i,d){return e(),t("div",c,"\u9019\u662F\u95DC\u65BC\u6211\u5011")}const m=o(s,[["render",n]]);export{m as default};

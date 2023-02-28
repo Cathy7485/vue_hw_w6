@@ -47,6 +47,18 @@ const routes = [
         component: () => import('../views/admin/AdminOrders.vue')
       },
     ]
+  },
+  // 404
+  {
+    path: '/:pathMath(.*)*',
+    component: () => import('../views/NotFound.vue'),
+  },
+  //重新導向
+  {
+    path: '/newPage/:pathMath(.*)*',
+    redirect: {
+      name: 'Home',
+    }
   }
 ]
 

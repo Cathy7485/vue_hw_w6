@@ -24,7 +24,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:cathy7485/cathy7485.github.io.git master
 
 # 部署到 https://cathy7485.github.io/vue_hw_w6
-git push -f https://github.com/cathy7485/vue_hw_w6.git master:gh-pages
+git push -f https://github.com/cathy7485/vue_hw_w6.git main:gh-pages
 
 cd -
 
